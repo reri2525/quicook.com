@@ -1,0 +1,209 @@
+header {
+  background-color: khaki;
+  height: 60px;
+  width: calc(100vw - 19px);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  border-bottom: 2px solid #bbb;
+  border-right: 1px solid #bbb;
+  .search {
+    position: relative;
+    left: 28%;
+    margin-top: 10px;
+    height: 30px;
+    input {
+      height: 32px;
+      width: 20%;
+      border-radius: 20px 0 0 20px;
+      border: solid 1px #bbb;
+      padding-left: 1%;
+    }
+    a {
+      width: 30px;
+      height: 30px;
+      margin-left: -35px;
+      padding: 14px 4px 2px 4px;
+      position: relative;
+      top: 7px;
+      border-radius: 26px;
+
+      &:hover {
+        background-color: #bbb;
+        opacity: 0.6;
+      }
+    }
+    button {
+      position: absolute;
+      top: 2px;
+      border-radius: 0 20px 20px 0;
+      height: 36px;
+      border: solid 1px #bbb;
+
+      &:hover {
+        background-color: rgba(248, 255, 255, 1);
+      }
+    }
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
+.header_login {
+  background-color: khaki;
+  height: 60px;
+  width: calc(100vw - 19px);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  border-bottom: 2px solid #bbb;
+  .search {
+    position: relative;
+    bottom: 35px;
+    left: 28%;
+    height: 30px;
+    input {
+      height: 32px;
+      width: 20%;
+      border-radius: 20px 0 0 20px;
+      border: solid 1px #bbb;
+      padding-left: 1%;
+    }
+    a {
+      width: 30px;
+      height: 30px;
+      margin-left: -35px;
+      padding: 14px 4px 2px 4px;
+      position: relative;
+      top: 7px;
+      border-radius: 26px;
+      &:hover {
+        background-color: #bbb;
+        opacity: 0.6;
+      }
+    }
+    button {
+      position: absolute;
+      top: 2px;
+      border-radius: 0 20px 20px 0;
+      height: 36px;
+      border: solid 1px #bbb;
+      &:hover {
+        background-color: rgba(248, 255, 255, 1);
+      }
+    }
+  }
+
+  .profile {
+    position: relative;
+    top: 10px;
+    left: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.281);
+      padding: 5px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .image {
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  .onprofile {
+    position: relative;
+    top: 10px;
+    left: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: #bbb;
+    padding: 5px;
+    border-radius: 10px;
+
+    .image {
+      height: 30px;
+      width: 30px;
+      border-radius: 15px;
+      position: relative;
+      top: 8px;
+    }
+  }
+
+  a {
+    cursor: pointer;
+  }  
+
+  .post_create {
+    background-color: hsl(186, 95%, 68%);
+    float: right;
+    position: relative;
+    bottom: 68px;
+    right: 160px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    margin-left: -5px;
+     &:hover {
+      background-color:  hsl(207, 95%, 68%);
+      transition: 0.3s;
+    }
+    a {
+      position: relative;
+      top: 10px;
+    }
+   }
+
+}
+
+.main_title {
+  font-size: 35px;
+  float: left;
+  width: fit-content;
+  padding: 2px 0px 0px 20px;
+  font-family: cursive;
+  color: black;
+  text-decoration: none; 
+  color: black;
+}
+
+.log {
+  float: right;
+  color: black;
+  float: right;
+  font-size: 20px;
+  padding: 0px 15px 0px 10px;
+  line-height: 60px;
+  margin-top: -39px;
+  text-decoration: none;
+  &:hover {
+    background-color: rgb(248, 248, 255);
+  }
+}
+
+.log2 {
+  float: right;
+  color: black;
+  float: right;
+  font-size: 20px;
+  padding: 0px 15px 0px 10px;
+  line-height: 60px;
+  margin-top: -77px;
+  text-decoration: none;
+  &:hover {
+    background-color: rgb(248, 248, 255);
+  }
+}
+

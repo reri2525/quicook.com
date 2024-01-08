@@ -1,0 +1,153 @@
+.edit {
+  .edit_container {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 390px;
+    min-height: 300px;
+    background-color: white;
+    border: #bbb 1px solid;
+    form {
+      width: 330px;
+      margin: 0 auto;
+      .update {
+        background-color: rgba(187, 187, 187, 0.286);
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        border: #bbb 1px solid;
+        border-radius: 10px;
+        margin-top: -20px;
+      }
+      .errors {
+        background-color: rgba(255, 0, 0, 0.237);
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        border: #bbb 1px solid;
+        border-radius: 10px;
+        margin-top: -20px;
+      }
+      .update_button {
+        background-color: rgb(33,123,215);
+        width: calc(100% + 8px);
+        padding: 6px 0px;
+        border-radius: 10px;
+        color: white;
+        margin-bottom: 14px;
+        &:hover {
+          transition: 0.3s;
+          background-color: rgb(33, 94, 215);
+        }
+      }
+      .acount_destroy_button {
+        margin-right: -8px;
+        float: right;
+        width: 120px;
+        height: 30px;
+        border: rgba(250, 0, 0) 1px solid;
+        border-radius: 10px;
+        color: rgba(250, 0, 0);
+        background-color: white;
+        &:hover {
+          transition: 0.3s;
+          cursor: pointer;
+          background-color: rgba(250, 0, 0);
+          color: white;
+        }
+      }
+      .password_reset_button {
+        margin-left: -8px;
+        float: left;
+        font-size: 13px;
+        width: 120px;
+        height: 30px;
+        border: rgb(33,123,215) 1px solid;
+        border-radius: 10px;
+        color: rgb(33,123,215);
+        position: relative;
+        left: 9px;
+        background-color: white;
+        &:hover {
+          transition: 0.3s;
+          cursor: pointer;
+          background-color: rgb(33,123,215);
+          color: white;
+        }
+      }
+      .email_update_button {
+        float: right;
+        font-size: 13px;
+        width: 150px;
+        height: 30px;
+        border: greenyellow 1px solid;
+        border-radius: 10px;
+        color: green;
+        position: relative;
+        left: 9px;
+        background-color: white;
+        &:hover {
+          transition: 0.3s;
+          cursor: pointer;
+          background-color: green;
+          color: white;
+        }
+      }
+      .icon {
+        position: relative;
+        left: 118px;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+       .image {
+         width: 100%;
+         height: 100%;
+         border-radius: 50px;
+         border: #bbb 1px solid;
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+      .icon_edit {
+       position: relative;
+       left: 80px;
+       color: rgba(0, 0, 255, 0.8);
+       border-bottom: 1px solid rgba(0, 0, 255, 0.8);
+       &:hover {
+        color: blue;
+        border-bottom: 1px solid blue;
+        cursor: pointer;
+       }
+       .image_input {
+        display: none;
+       }
+      } 
+      .name {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      .self_introduction {
+        width: 100%;
+        padding-bottom: 60px;
+        margin-bottom: 30px;
+      }
+      .email {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+      .password {
+        width: 100%;
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+}

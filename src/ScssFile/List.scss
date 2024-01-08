@@ -1,0 +1,130 @@
+.list_area {
+  position: relative;
+  position: fixed;
+  top: 62px;
+  left: 0px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 1);
+  min-width: 17%;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overflow: hidden;  
+  &:hover {
+    overflow-y: scroll;
+    overscroll-behavior: none;
+   }
+   .list_inner {
+      min-height: calc(100vh - 150px);
+      padding-bottom: 60px;
+     ul {
+      width: 170px;
+      margin-left: 1%;
+      border-bottom: #bbb 1px solid;
+      padding-bottom: 15px;
+      li {
+        list-style: none;
+      }
+      .list_title {
+        font-size: 15px;
+        font-weight: 300;
+      }
+     }
+     .icon {
+      position: relative;
+      top: 5px;
+      margin-right: 10px;
+     }
+     .list {
+      padding: 15px 20px 15px 20px;
+      font-size: 20px;
+      width:fit-content;
+      margin-left: -36px;
+      border-radius: 40px;
+      z-index: 1;
+      &:hover {
+       background-color: rgba(128, 128, 128, 0.281);
+       transition: 0.3s;
+      }
+     }
+     .list_active {
+      padding: 15px 20px 15px 20px;
+      font-size: 20px;
+      width:fit-content;
+      margin-left: -36px;
+      border-radius: 40px;
+      z-index: 1;
+      font-weight: 900;
+      color: blue;
+      .list_title {
+        font-size: 15px;
+        font-weight: 900;
+      }
+     }
+     .list2 {
+      padding: 15px 20px 15px 20px;
+      font-size: 20px;
+      width:fit-content;
+      margin-left: -36px;
+      border-radius: 40px;
+      z-index: 1;
+      margin-bottom: -25px;
+      .category_expand {
+        position: relative;
+        left: 60px;
+      }
+     }
+     .category {
+      position: relative;
+      margin-bottom: 10px;
+      margin-left: -5px;
+      a {
+       font-size: 15px;
+       cursor: pointer;
+        &:hover {
+          border-bottom: #bbb 1px solid;
+        }
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 4px;
+        margin-right: 5px;
+      }
+      ul {
+        border: none;
+        margin-bottom: -23px;
+        .dish {
+          height: 16px;
+          width: fit-content;
+          font-size: 13px;
+          margin-top: 5px;
+          padding-bottom: 1px;
+          cursor: pointer;
+          &:hover {
+            border-bottom: 1px solid #000;
+            padding-bottom: 0px;
+          }
+        }
+      }
+     }
+     .list_link {
+      text-decoration: none;
+      color: black;
+     }
+     .post {
+      background-color: hsl(186, 95%, 68%);
+      padding: 15px 50px 15px 50px;
+      text-align: center;
+      border-radius: 20px;
+      position: relative;
+      top: 30px;
+      left: 0px;
+      margin-left: -5px;
+      &:hover {
+       background-color:  hsl(207, 95%, 68%);
+       transition: 0.3s;
+      }
+     }
+  }
+}

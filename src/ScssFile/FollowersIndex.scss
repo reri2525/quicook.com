@@ -1,0 +1,105 @@
+.followers_index_modal {
+    position: fixed;
+    top: 180px;
+    left: 500px;
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    z-index: 150;
+    border-radius: 10px;
+    h3 {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        border-bottom: #bbb 1px solid;
+    }
+    .close { 
+        position: absolute;
+        top: 1px;
+        left: 330px;
+        border-radius: 30px;
+        padding: 15px 17px;
+        width:fit-content;
+        color: black;
+        &:hover {
+         background-color: #bbb;
+        }
+        a {
+          position: relative;
+          top: 1px;
+          left: 0px;
+        }
+    }
+    .followers_innner {
+        overflow-y: scroll;
+        overscroll-behavior: none;
+        height: 300px;
+        .followers_content {
+            display: flex;
+            margin-bottom: 5px;
+            padding: 4px 0px 4px 0px;
+            &:hover {
+                background-color: rgba(187, 187, 187, 0.4);
+            }
+            .icon {
+                margin-left: 10px;
+                width: 40px;
+                height: 40px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                }
+            }
+            .user_name {
+                margin-top: 8px;
+                margin-left: 10px;
+                width: 120px;
+                color: black;
+                text-decoration: none;
+                a {
+                    &:hover {
+                        opacity: 0.8;
+                        border-bottom: black 1px solid;                
+                    }           
+                }
+            }
+            .follow {
+                background-color: yellow;
+                border: #bbb 1px solid;
+                height: 30px;
+                line-height: 30px;
+                width: 100px;
+                border-radius: 10px;
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                left: 70px;
+                text-align: center;
+                &:hover {
+                  background-color: rgb(255, 213, 0);
+                  transition: 0.3s;
+                  cursor: pointer;
+                }
+            }
+            .unfollow {
+                background-color: rgba(255, 255, 255, 0.2);
+                border: #bbb 1px solid;
+                height: 30px;
+                line-height: 30px;
+                width: 100px;
+                border-radius: 10px;
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                left: 70px;
+                text-align: center;
+                &:hover {
+                  background-color: white;
+                  transition: 0.3s;
+                  cursor: pointer;
+                }
+            }
+        }
+    }
+}

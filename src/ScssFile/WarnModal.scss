@@ -1,0 +1,64 @@
+.warn_modal {
+    position: fixed;
+    top: 200px;
+    left: 550px;
+    background-color: white;
+    padding: 5px;
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+    z-index: 150;
+    h3 {
+        margin-left: 45px;
+    }
+    p {
+        margin-left: 40px;
+        opacity: 0.6;
+    }
+    .destroy {
+        margin-top: 5px;
+        margin-left: 38px;
+        background-color: red;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        width: 200px;
+        height: 40px;
+        &:hover {
+            background-color: rgb(200, 0, 0);
+            transition: 0.3s;
+        }
+    }
+    .destroying {
+        margin-top: 5px;
+        margin-left: 38px;
+        background-color: red;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+        width: 200px;
+        height: 40px;
+        &:hover {
+            background-color: rgb(200, 0, 0);
+            transition: 0.3s;
+            cursor: not-allowed;
+        }
+    }
+    .cancel {
+        margin-top: 5px;
+        margin-left: 38px;
+        background-color: white;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        width: 200px;
+        height: 40px;
+        border: 1px solid #bbb;
+        &:hover {
+            background-color: rgba(128, 128, 128, 0.5);
+            transition: 0.3s;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.center {
+    height: calc(100vh - 80px);
+    width: calc(100vw - 100px);
+    z-index: 1;
+    .center_inner {
+     min-height: calc(100vh - 60px);
+    }
+    .center_container{
+      width: calc(100vw - 35px);
+      background-color: #fafafa;
+      min-height: calc(100vh - 60px);
+      z-index: 1;
+      border-right: #bbb 1px solid;
+    }
+}
+
+.flash_message {
+  background-color: rgba(187, 187, 187, 0.8);
+  width: 90%;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 80px;
+  z-index: 100;
+  border-radius: 10px 10px;
+  border: #bbb 1px solid;
+  padding: 5px 0px;
+  margin-top: 7px;
+}

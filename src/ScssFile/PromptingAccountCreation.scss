@@ -1,0 +1,60 @@
+.prompting_login {
+    position: fixed;
+    top: 120px;
+    left: 410px;
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    z-index: 150;
+    border-radius: 20px;
+    .container {
+        position: relative;
+        top: 60px;
+        left: 90px;
+        width: 440px;
+        height: 360px;
+        z-index: 100;
+        .login {
+           border: none;
+           background-color: khaki;
+           display: block;
+           font-size: 20px;
+           padding: 10px 178px 10px 178px;
+           border-radius: 30px;
+           margin-top: 90px;
+           &:hover {
+            cursor: pointer;
+           }
+        }
+       .new {
+           border: 1px #bbb solid;
+           background-color: white;
+           display: block;
+           font-size: 20px;
+           padding: 10px 178px 10px 178px;
+           border-radius: 30px;
+           margin-top: 20px;
+           &:hover {
+            cursor: pointer;
+           }
+        }
+       .close { 
+           position: absolute;
+           bottom: 370px;
+           left: 440px;
+           border-radius: 30px;
+           padding: 15px 17px;
+           width: fit-content;
+           color: black;
+           &:hover {
+             background-color: #bbb;
+             cursor: pointer;
+           }
+           a {
+             position: relative;
+             top: 1px;
+             left: 0px;
+           }
+       }
+    }
+}
