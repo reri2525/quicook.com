@@ -1,18 +1,19 @@
 .postform_modal {
     background-color: white;
-    position: fixed;
-    top: 80px;
-    left: calc(100vw / 5 + 40px);
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 80%;
-    width: 800px;
+    width: 55%;
     z-index: 100;
     border-radius: 12px;
     padding: 10px 10px 10px 10px;
     .close { 
+      float: right;
+      position: relative;
+      bottom: 520px;
       z-index: 100;
-      position: fixed;
-      top: 90px;
-      left: 1050px;
       border-radius: 30px;
       border: none;
       background-color: none;
@@ -120,13 +121,14 @@
   }
   .postform_modal_inner {
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     height: 90%;
     }
   .form_post {
     margin-left: 15px;
     width: 750px;
     z-index: 100;
+    overflow-x: hidden;
      input {
        width: calc(100% - 18px);
        padding: 5px 0px 5px 5px;

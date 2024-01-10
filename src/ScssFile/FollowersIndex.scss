@@ -1,7 +1,8 @@
 .followers_index_modal {
-    position: fixed;
-    top: 180px;
-    left: 500px;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     height: 400px;
     width: 400px;

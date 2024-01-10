@@ -11,7 +11,7 @@ function ProfileEdit() {
  const [update, setUpdate] = useState<string | null>(null)
  const [errors, setErrors] = useState<string | null>(null)
  const [name, setName] = useState(user && user.name)
- const [nameChange, setNameChange]= useState(user && user.name)
+ const [nameChange, setNameChange]= useState("")
  const [introduction, setIntroduction] = useState(user && user.introduction)
  const [email, setEmail] = useState(user && user.email)
  const [avatar, setAvatar] = useState<TypeFileDetails>()
@@ -74,8 +74,18 @@ function ProfileEdit() {
    } else {
      document.body.style.overflow = 'auto';
    }
-   setEmail(user && user.email)
+   axios.get(`${url}/user/profile/edit`, { withCredentials: true })
+    .then(response => {
+      let user = response.data.user
+      console.log(user)
+      setName(user.name)
+      setIntroduction(user.introduction)
+      setEmail(user.email)
+    }).catch(error => {
+      console.log("error")
+    })
  }, [warnModal])
+
  return (
   <Fragment>
    { user && (
@@ -88,6 +98,11 @@ function ProfileEdit() {
          {avatarPreview && !(avatarPreview instanceof ArrayBuffer) && 
           <img className='image'
             src={avatarPreview}>
+          </img>
+         }
+         {user && !(avatarPreview) &&
+          <img className='image'
+            src={user.avatar.url}>
           </img>
          }
          </div>

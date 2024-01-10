@@ -17,7 +17,7 @@ import FollowingIndex from './FollowingIndex';
 import FollowersIndex from './FollowersIndex';
 import { url } from "../config";
 import { TypeUserProfile, TypePost } from '../TypeDefinition/Type';
-function Profile(props: any) {
+function Profile() {
   const context = useContext(MainContext)
   const loggedInStatus = context.loggedInStatus
   const bookmarkCreate = context.bookmarkCreate
@@ -179,7 +179,8 @@ function Profile(props: any) {
   return (
    <Fragment>
     {user  && user.id && (
-    <div className='profile_container'>
+    <div className='profile'>
+     <div className='profile_container'>
       <div className='icon'>
         <img className='image' src={user.avatar.url} alt="User Avatar" />
       </div>
@@ -202,6 +203,7 @@ function Profile(props: any) {
          <pre>{user.introduction}</pre>
         </div>
       </div>
+     </div>
     </div>
     )}
     { postExist ? 
@@ -263,7 +265,7 @@ function Profile(props: any) {
                </div> :
       <div className='pagenate_container'>
        {pagecount > 1 ? 
-       <div className='pagenate'><nav className='back'>back</nav>
+       <div className='pagenate'>
         <button className='page_move' onClick={() => postBack(currentPage)}><NavigateBeforeIcon/></button>
         { currentPage === 1 ? "" :
          <button 
@@ -290,7 +292,6 @@ function Profile(props: any) {
            onClick={() => postGo(currentPage)}>
             <NavigateNextIcon/>
         </button>
-        <nav className='next'>next</nav>
        </div> : <></> }
       </div>}
     { followingIndexModal ? <FollowingIndex user={user} setFollowingIndexModal={setFollowingIndexModal} /> : <></> }

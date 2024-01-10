@@ -1,13 +1,16 @@
 .post_show_container {
     background-color: rgb(250,250,250);
     border-radius: 10px;
-    position: fixed;
-    top: 80px;
-    left: 250px;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 570px;
-    width: 1000px;
+    width:  70%;
     z-index: 100;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-x: scroll;
     .head {
      margin-left: 30px;
      margin-top: 25px;
