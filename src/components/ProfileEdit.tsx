@@ -10,6 +10,7 @@ function ProfileEdit() {
  const user: TypeUserProfileEdit = context.user as TypeUserProfileEdit;
  const [update, setUpdate] = useState<string | null>(null)
  const [errors, setErrors] = useState<string | null>(null)
+ const [passwordReset, setPasswordReset] = useState<string | null>(null)
  const [name, setName] = useState(user && user.name)
  const [nameChange, setNameChange]= useState("")
  const [introduction, setIntroduction] = useState(user && user.introduction)
@@ -68,6 +69,16 @@ function ProfileEdit() {
  const handleDestroy = () => {
   setWarnModal(true)
  }
+ const handlePasswordReset = () => {
+  axios.post(`${url}/password_resets`, { withCredentials: true })
+  .then(response => {
+    setPasswordReset("メールを確認してください")
+    console.log(response.data.user)
+  }).catch(error => {
+    console.log(error)
+    setErrors("エラーが発生しました")
+  })
+ }
  useEffect(() => {
    if (warnModal) {
      document.body.style.overflow = 'hidden';
@@ -82,7 +93,7 @@ function ProfileEdit() {
       setIntroduction(user.introduction)
       setEmail(user.email)
     }).catch(error => {
-      console.log("error")
+      console.log(error)
     })
  }, [warnModal])
 
@@ -132,7 +143,7 @@ function ProfileEdit() {
            onChange={event => setEmail(event.target.value)}
          /><br/>
          <button type='submit' className='update_button'>更新する</button>
-         <button type='button' className='password_reset_button' onClick={() => handleDestroy()}>パスワード再設定</button>
+         <button type='button' className='password_reset_button' onClick={() => handlePasswordReset()}>パスワード再設定</button>
          <button type='button' className='acount_destroy_button' onClick={() => handleDestroy()}>アカウント削除</button>
         </form>
       </div>

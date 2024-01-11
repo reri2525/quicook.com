@@ -219,7 +219,7 @@ function Profile() {
     { postall[0] ? 
       <div className='post_container_profile'>
        {postExist ? <></> : <h1>誰も投稿してないの！？まじ？</h1>} 
-       {postall.map((value: any, key: number) => {
+       {postall.map((value: TypePost, key: number) => {
          return (
          <div className='post' key={key} onClick={() => postShow(postall[key].id)}>
            <div className='head'>
