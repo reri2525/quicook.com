@@ -21,7 +21,7 @@ function Top(props: any) {
     <div className='top'>
      <div className='container'>
       <h1>Quicook..</h1>
-      <h3>３分で作れるお手軽料理</h3>
+      <h3>３分で作れるお手軽料理!</h3>
       <img className='top_photo' src='http://illust-ryokka.jp/wp-content/uploads/2017/12/Cuisine-16.png'></img>
      </div>
     </div>

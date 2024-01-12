@@ -17,8 +17,6 @@ function ProfileEdit() {
  const [email, setEmail] = useState(user && user.email)
  const [avatar, setAvatar] = useState<TypeFileDetails>()
  const [avatarPreview, setAvatarPreview] = useState<string | ArrayBuffer | null | undefined>(user && user.avatar.url)
- const [password, setPassword] = useState("")
- const [passwordConfirmation, setPasswordConfirmation] = useState("")
  const [warnModal, setWarnModal] = useState(false)
  const warnType = "acountDestroy"
  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,8 +27,6 @@ function ProfileEdit() {
   if (avatar) {formData.append('user[avatar]', avatar)}
   introduction && formData.append('user[introduction]', introduction);
   email && formData.append('user[email]', email);
-  formData.append('user[password]', password);
-  formData.append('user[password_confirmation]', passwordConfirmation);
   axios.put(`${url}/users/${user && user.id}`, formData)
     .then(response => {
       if (response.data.status === true) {
@@ -76,7 +72,7 @@ function ProfileEdit() {
     console.log(response.data.user)
   }).catch(error => {
     console.log(error)
-    setErrors("エラーが発生しました。")
+    setErrors("エラーが発生しました.")
   })
  }
  useEffect(() => {
