@@ -72,11 +72,11 @@ function ProfileEdit() {
  const handlePasswordReset = () => {
   axios.post(`${url}/password_resets`, { withCredentials: true })
   .then(response => {
-    setPasswordReset("メールを確認してください")
+    setPasswordReset("メールを確認してください。")
     console.log(response.data.user)
   }).catch(error => {
     console.log(error)
-    setErrors("エラーが発生しました")
+    setErrors("エラーが発生しました。")
   })
  }
  useEffect(() => {
