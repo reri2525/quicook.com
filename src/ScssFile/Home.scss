@@ -1,16 +1,16 @@
 .post_not_exist {
-  width: calc(100vw - 40%);
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  margin-left: 25%;
+  width: calc(100vw - 30%);
+  height: calc(100vh - 190px);
+  margin-top: 90px;
+  margin-left: 20%;
   h1 {
+    margin: 0 auto;
     font-size: 36px;
+    text-align: center;
   }
   .highlight_off_icon {
-    position: relative;
-    bottom: 20px;
+    margin: 0 auto;
+    margin-left: 38%;
   }
   img {
     border-radius: 100px;
