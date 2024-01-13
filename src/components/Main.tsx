@@ -2,7 +2,7 @@ import { Fragment, useState, useContext} from 'react';
 import { MainContext } from '../App';
 import '../ScssFile/Main.scss'
 import Header from './Header';
-import PostForm from './Postform';
+import PostForm from './PostForm';
 import List from './List';
 import Footer from './Footer';
 import Logmodal from './Login';
