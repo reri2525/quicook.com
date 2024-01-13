@@ -11,6 +11,7 @@ import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StarIcon from '@mui/icons-material/Star';
+import PersonAddAlt1 from '@mui/icons-material/PersonAddAlt1';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import { amber, grey, brown } from '@mui/material/colors';
 import { url } from "../config";
@@ -134,7 +135,7 @@ function Following() {
          <Fragment>
            <div className='post_not_exist'>
              <h1>好きなユーザーをフォローしましょう!</h1>
-             <img className='highlight_off_icon' src='https://assets.st-note.com/img/1689656664988-phTXkWUO83.png?width=800'/>
+             <PersonAddAlt1 className='highlight_off_icon' style={{fontSize: '100px'}}/>
            </div>
          </Fragment>
       } 

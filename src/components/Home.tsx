@@ -145,7 +145,7 @@ function Home() {
          <Fragment>
            <div className='post_not_exist'>
              <h1>誰も投稿してないの??????????</h1>
-             <HighlightOffIcon className='highlight_off_icon' style={{fontSize: '60px'}}/>
+             <HighlightOffIcon className='highlight_off_icon' style={{fontSize: '100px'}}/>
            </div>
          </Fragment>
       } 

@@ -10,7 +10,8 @@
   }
   .highlight_off_icon {
     margin: 0 auto;
-    margin-left: 38%;
+    margin-left: 43%;
+    text-align: center;
   }
   img {
     border-radius: 100px;
@@ -22,7 +23,8 @@
 .post_container {
   width: calc(100vw - 40%);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;;
+  min-height: calc(100vh - 160px);
   margin-top: 60px;
   margin-left: 25%;
   h1 {

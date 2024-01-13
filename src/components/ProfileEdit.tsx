@@ -12,46 +12,38 @@ function ProfileEdit() {
  const [errors, setErrors] = useState<string | null>(null)
  const [passwordReset, setPasswordReset] = useState<string | null>(null)
  const [name, setName] = useState(user && user.name)
- const [nameChange, setNameChange]= useState("")
  const [introduction, setIntroduction] = useState(user && user.introduction)
  const [email, setEmail] = useState(user && user.email)
  const [avatar, setAvatar] = useState<TypeFileDetails>()
  const [avatarPreview, setAvatarPreview] = useState<string | ArrayBuffer | null | undefined>(user && user.avatar.url)
  const [warnModal, setWarnModal] = useState(false)
+ const [disabled, setDisabled] = useState(true)
  const warnType = "acountDestroy"
  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  console.log(user && user.id)
+  setDisabled(false)
   event.preventDefault()
   const formData = new FormData();
   name && formData.append('user[name]', name);
   if (avatar) {formData.append('user[avatar]', avatar)}
   introduction && formData.append('user[introduction]', introduction);
   email && formData.append('user[email]', email);
-  axios.put(`${url}/users/${user && user.id}`, formData)
+  axios.put(`${url}/users/${user.id}`, formData)
     .then(response => {
       if (response.data.status === true) {
-        const data = response.data
-        user && (user.name = data.user.name)
-        user && (user.introduction = data.user.introduction)
-        user && (user.email = data.user.email)
-        user && (user.avatar = data.user.avatar)
-        setNameChange(data.user.name)
+        setPasswordReset(null)
         setErrors(null)
         setUpdate("変更されました。")
-        window.scrollTo(0, 0);
-      } else if (response.data.status === "update_email") {
-        setErrors(null)
-        setUpdate("メールを確認して承認してください。")
-        window.scrollTo(0, 0);
+        setDisabled(true)
       } else {
         setErrors("変更されませんでした。")
         setUpdate(null)
-        window.scrollTo(0, 0);
+        setDisabled(true)
       }
       }).catch(error => {
+        console.log(error)
         setErrors("変更されませんでした。")
         setUpdate(null)
-        window.scrollTo(0, 0);
+        setDisabled(true)
       })
  }
  const filechange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,13 +58,16 @@ function ProfileEdit() {
   setWarnModal(true)
  }
  const handlePasswordReset = () => {
-  axios.post(`${url}/password_resets`, { withCredentials: true })
+  setDisabled(false)
+  axios.post(`${url}/password_resets`, { email: user.email })
   .then(response => {
     setPasswordReset("メールを確認してください。")
-    console.log(response.data.user)
+    setUpdate(null)
+    setDisabled(true)
   }).catch(error => {
     console.log(error)
     setErrors("エラーが発生しました.")
+    setDisabled(true)
   })
  }
  useEffect(() => {
@@ -81,7 +76,10 @@ function ProfileEdit() {
    } else {
      document.body.style.overflow = 'auto';
    }
-   axios.get(`${url}/user/profile/edit`, { withCredentials: true })
+ }, [warnModal])
+
+ useEffect(() => {
+    axios.get(`${url}/user/profile/edit`, { withCredentials: true })
     .then(response => {
       let user = response.data.user
       console.log(user)
@@ -91,7 +89,9 @@ function ProfileEdit() {
     }).catch(error => {
       console.log(error)
     })
- }, [warnModal])
+ }, [])
+
+
 
  return (
   <Fragment>
@@ -101,6 +101,7 @@ function ProfileEdit() {
         <form onSubmit={event => onSubmit(event)}>
          { update && <h3 className='update'>{update}</h3> }
          { errors && <h3 className='errors'>{errors}</h3> }
+         { passwordReset && <h3 className='password_reset'>{passwordReset}</h3> }
          <div className='icon'>
          {avatarPreview && !(avatarPreview instanceof ArrayBuffer) && 
           <img className='image'
@@ -138,8 +139,8 @@ function ProfileEdit() {
            value={email}
            onChange={event => setEmail(event.target.value)}
          /><br/>
-         <button type='submit' className='update_button'>更新する</button>
-         <button type='button' className='password_reset_button' onClick={() => handlePasswordReset()}>パスワード再設定</button>
+         <button type='submit' className='update_button' disabled={!disabled}>更新する</button>
+         <button type='button' className='password_reset_button' onClick={() => handlePasswordReset()} disabled={!disabled}>パスワード再設定</button>
          <button type='button' className='acount_destroy_button' onClick={() => handleDestroy()}>アカウント削除</button>
         </form>
       </div>

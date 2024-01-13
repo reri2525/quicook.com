@@ -157,7 +157,7 @@ function Search() {
          <Fragment>
            <div className='post_not_exist'>
              <h1>投稿が見つかりませんでした。</h1>
-             <HighlightOffIcon className='highlight_off_icon' style={{fontSize: '60px'}}/>
+             <HighlightOffIcon className='highlight_off_icon' style={{fontSize: '100px'}}/>
            </div>
          </Fragment>
       } 

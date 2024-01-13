@@ -129,7 +129,7 @@ function Bookmark() {
          <Fragment>
            <div className='post_not_exist'>
              <h1>ブックマーク機能を活用して好きな料理を保存しよう!</h1>
-             <img className='highlight_off_icon' src='https://assets.st-note.com/img/1689656664988-phTXkWUO83.png?width=800'/>
+             <BookmarkBorderIcon className='highlight_off_icon' style={{fontSize: '100px'}}/>
            </div>
          </Fragment>
       } 
