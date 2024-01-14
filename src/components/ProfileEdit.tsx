@@ -18,7 +18,7 @@ function ProfileEdit() {
  const [avatarPreview, setAvatarPreview] = useState<string | ArrayBuffer | null | undefined>(user && user.avatar.url)
  const [warnModal, setWarnModal] = useState(false)
  const [disabled, setDisabled] = useState(true)
- const warnType = "acountDestroy"
+ const warnType: string = "acountDestroy"
  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   setDisabled(false)
   event.preventDefault()
