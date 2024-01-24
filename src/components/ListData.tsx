@@ -1,10 +1,8 @@
 import HomeIcon from '@mui/icons-material/Home';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import HelpIcon from '@mui/icons-material/Help';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import { GavelOutlined } from '@mui/icons-material';
+import { PrivacyTip } from '@mui/icons-material';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -26,8 +24,7 @@ export const ListData1 = [
         icon:  <BookmarkBorderIcon  style={{ fontSize: '20px' }}/>,
         icon2: <BookmarkIcon  style={{ fontSize: '20px' }}/>,
         link: "/bookmark/page/1"
-    },
-    
+    }, 
 ]
 export const ListData2 = [
     {title: "レシピカテゴリ", icon: <RestaurantIcon  style={{ fontSize: '20px' }}/>},
@@ -57,6 +54,15 @@ export const DishData = [
     {dish1: "ケーキ", dish2: "サンドイッチ"}
 ]
 export const ListData3 = [
-    { title: "設定", icon: <SettingsIcon />, icon2: <SettingsSuggestIcon /> },
-    { title: "ヘルプ", icon: <HelpOutlineIcon />, icon2: <HelpIcon /> }
+    {
+        title: "利用規約",
+        icon: <GavelOutlined  style={{ fontSize: '20px' }}/>,
+        link: "/terms"
+    },
+    {
+        title: "プライバシーポリシー",
+        icon:  <PrivacyTip  style={{ fontSize: '20px' }}/>,
+        link: "/privacy"
+    },
+
 ]

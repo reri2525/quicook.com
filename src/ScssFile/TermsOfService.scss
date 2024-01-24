@@ -1,0 +1,24 @@
+.terms_page {
+    position: relative;
+    top: 100px;
+    left: 25%;
+    min-height: 100vh;
+    width: 60%;
+    overflow: hidden;
+    margin-bottom: 300px;
+    h2 {
+        margin-left: 10px;
+        border-left: 10px solid skyblue;
+    }
+    ul {
+        p {
+            margin-left: -16px;
+        }
+        li {
+            margin-top: 10px;
+        }
+    }
+    .last {
+        float: right;
+    }
+}

@@ -74,7 +74,6 @@
       line-height: 30px;
       width: 150px;
       border-radius: 10px;
-      
       text-align: center;
       &:hover {
         background-color: white;
@@ -113,7 +112,6 @@
   width: calc(100vw - 20%);
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
   margin-left: 20%;
   h1 {
     position: fixed;
@@ -236,7 +234,7 @@
 }
 
 .post_skeleton_container_profile {
-  width: calc(100vw - 40%);
+  width: calc(100vw - 20%);
   display: flex;
   flex-wrap: wrap;
   margin-top: 60px;

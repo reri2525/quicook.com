@@ -20,6 +20,8 @@ import{
 } from "react-router-dom";
 import { url } from "./config";
 import { TypePost, TypePostShow, TypeUser, TypeMainContext } from './TypeDefinition/Type';
+import TermsOfService from './components/TermsOfService';
+import PrivacyPolicy from './components/PrivacyPolicy';
 export const MainContext = createContext<TypeMainContext>({
   handleLogin: () => {},
   loggedInStatus: "",
@@ -218,6 +220,16 @@ function App() {
               <Main { ...props } url={<ProfileEdit />}/>
             )}
           />  
+        <Route exact path={"/terms"}
+             render={props => (
+              <Main { ...props} url={<TermsOfService />}/>
+            )}
+          />  
+        <Route exact path={"/privacy"}
+             render={props => (
+              <Main {...props} url={<PrivacyPolicy />}/>
+            )}
+          /> 
         <Route exact path={"/password/:id/reset"}
              render={props => (
               <PasswordResetForm />
@@ -227,7 +239,7 @@ function App() {
              render={props => (
               <UpdateEmail />
             )}
-          />  
+          />   
       </Switch>
     </Router>
   </MainContext.Provider>

@@ -141,25 +141,27 @@ function Following() {
       } 
       { postall[0] ? 
       <div className='post_container'>
-       {postall.map((value: TypePost, key: number) => {
+       {postall.map((value: TypePost, index: number) => {
          let iconColor;
 
-         if (key === 0) {
-           iconColor = amber[500]; // 金色
-         } else if (key === 1) {
-           iconColor = grey[500]; // 銀色
-         } else if (key === 2) {
-           iconColor = brown[500]; // 銅色
-         }
+         if (postall.length > 0) {
+          if (value.id === postall[0].id) {
+            iconColor = amber[500]; // 金色
+          } else if (value.id === postall[1].id) {
+            iconColor = grey[500]; // 銀色
+          } else if (value.id === postall[2].id) {
+            iconColor = brown[500]; // 銅色
+          }
+        }
          return (
-         <div className='post' key={key} onClick={() => postShow(postall[key].id)}>
+         <div className='post' key={value.id} onClick={() => postShow(value.id)}>
            <div className='head'>
              <div className='icon'>
                <img src={value.user.avatar.url}></img>
-               {key <= 2 && (
+               {index <= 2 && (
                 <Fragment>
                  <StarIcon style={{ color: iconColor, fontSize: '60px', position: 'relative', top: '33px', right: '36px'}} />
-                 <h2>{key +1}</h2>
+                 <h2>{index +1 }</h2>
                 </Fragment>
                )}
              </div>
@@ -196,13 +198,13 @@ function Following() {
       : <></> }
       { postall.length === 0 && postExist ? 
                <div className='post_skeleton_container'>
-                 {[...Array(20).keys()].map(i =>
+                 {[...Array(27).keys()].map(i =>
                     <div className='post_skeleton'></div>
                  )}
                </div> :
       <div className='pagenate_container'>
        {pagecount > 1 ? 
-       <div className='pagenate'><nav className='back'>back</nav>
+       <div className='pagenate'>
         <button className='page_move' onClick={() => postBack(currentPage)}><NavigateBeforeIcon/></button>
         { currentPage === 1 ? "" :
          <button 
@@ -229,7 +231,6 @@ function Following() {
            onClick={() => postGo(currentPage)}>
             <NavigateNextIcon/>
         </button>
-        <nav className='next'>next</nav>
        </div> : <></> }
       </div>}
    </Fragment>

@@ -56,7 +56,7 @@ const PostShow = () => {
     }
    })
    .catch(error => {
-    console.log("b")
+    console.log(error)
    })
  }
  const handleBookmark = (post: TypePostShow) => {
@@ -136,8 +136,8 @@ const PostShow = () => {
           <div className='post_detail_content'>
             <h2>{post.title}</h2>
             <a>{post.content}</a><br />
-            <p>時間:　{post.time}分</p>
-            <p>費用:　{post.cost}円</p>
+            <p>時間:  {post.time}分</p>
+            <p>費用:  {post.cost}円</p>
             <h3>材料:</h3>
             <p style={{ fontSize: '16px', opacity: '0.8' }}>({post.number_of_people})</p>
             {[...Array(15)].map((_, i) => (

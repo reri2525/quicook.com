@@ -135,9 +135,9 @@ function Bookmark() {
       } 
       { postall[0] ? 
       <div className='post_container'>
-       {postall.map((value: TypePost, key: number) => {
+       {postall.map((value: TypePost) => {
          return (
-         <div className='post' key={key} onClick={() => postShow(postall[key].id)}>
+         <div className='post' key={value.id} onClick={() => postShow(value.id)}>
            <div className='head'>
              <div className='icon'>
              <img src={value.user.avatar.url}></img>

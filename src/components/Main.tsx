@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext} from 'react';
+import { useState, useContext} from 'react';
 import { MainContext } from '../App';
 import '../ScssFile/Main.scss'
 import Header from './Header';
@@ -22,8 +22,7 @@ const Main = (props: MainProps) => {
   const [flashMessage, setFlashMessage] = useState("")
 
     return (
-      <Fragment>
-      <body>
+      <>
        { flashMessage && 
          <div>
            <h2 className='flash_message'>{flashMessage}</h2> 
@@ -43,8 +42,7 @@ const Main = (props: MainProps) => {
          { newModal ? <Newmodal newModal={newModal} setFlashMessage={setFlashMessage} setNewModal={setNewModal} setModal={setModal} /> : <></> }
          { promptingAccountCreation ? <PromptingAccountCreation setLogModal={setLogModal} setNewModal={setNewModal} /> : <></> } 
          { loggedInStatus === "未ログイン" ? <Footer setLogModal={setLogModal} setNewModal={setNewModal}/> : <></> }
-     </body>
-    </Fragment>
+     </>
     )
 }
 export default Main;

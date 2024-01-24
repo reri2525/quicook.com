@@ -5,20 +5,20 @@ footer {
     bottom: 0px;
     width: calc(100vw - 19px);
     height: 80px;
-    z-index: 2;
+    z-index: 18;
     border-top: 1px solid #bbb;
     background-color: khaki;
     border-right: 1px solid #bbb;
     .footer_title {
-      display: flex;
       position: absolute;
-      left: 30%;
+      left: 35%;
        h2 {
          position: absolute;
          top: -33px;
          font-family: cursive;
          font-size: 30px;
          color: rgba(0, 0, 0, 0.7);
+         text-align: center;
          &:first-letter {
            color: rgba(0, 0, 0);
            font-size: 40px;
@@ -35,7 +35,7 @@ footer {
     h3 {
       position: relative;
       top: 20px;
-      left: 30%;
+      left: 32%;
       &:first-letter {
         color: red;
         font-size: 24px;
@@ -44,6 +44,7 @@ footer {
     .login {
       float: right;
       position: relative;
+      right: 200px;
       bottom: 53px;
       font-size: 20px;
       border: white 1px solid;
@@ -59,6 +60,7 @@ footer {
     .new {
       float: right;
       position: relative;
+      right: 200px;
       bottom: 53px;
       font-size: 20px;
       border: white 1px solid;
